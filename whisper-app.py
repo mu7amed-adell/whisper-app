@@ -32,7 +32,7 @@ if st.sidebar.button("Transcribe Audio"):
             audio_file_path = os.path.abspath(temp_audio.name)
 
         # Run transcription
-        segments, info = model.transcribe(audio_file_path, language=None)
+        segments, info = model.transcribe(audio_file_path, language="ar")
 
         # Combine all segments into full transcript
         full_transcript = "\n".join(
